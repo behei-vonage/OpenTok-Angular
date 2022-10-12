@@ -37,7 +37,7 @@
                     props="{style: {nameDisplayMode: 'off'}}">
                 </ot-subscriber>
                 <ot-publisher id="publisher" 
-                    props="{style: {nameDisplayMode: 'off'}, resolution: '1280x720', frameRate: 30}">
+                    props="{style: {nameDisplayMode: 'off'}, resolution: '1920x1080', frameRate: 30, videoContentHint: 'detail'}">
                 </ot-publisher>
             </ot-layout>
         </div>
@@ -54,9 +54,9 @@
                 OTSession.init(apiKey, sessionId, token);
                 $scope.streams = OTSession.streams;
             }]).value({
-                apiKey: 'YOUR_APIKEY',
-                sessionId: 'YOUR_SESSION_ID',
-                token: 'YOUR_TOKEN'
+                apiKey: '46749652',
+                sessionId: '1_MX40Njc0OTY1Mn5-MTY2NTYxMTE1MTUwMn5JVGZUWDJRQTRiY20wellXcUYxS0tYbjR-fg',
+                token: 'T1==cGFydG5lcl9pZD00Njc0OTY1MiZzaWc9MmY2Nzc1ZTJhMWZiNTQ4ZjA2NWE4MjBmZTIxY2FlMjc5YWNkYjk4NjpzZXNzaW9uX2lkPTFfTVg0ME5qYzBPVFkxTW41LU1UWTJOVFl4TVRFMU1UVXdNbjVKVkdaVVdESlJRVFJpWTIwd2VsbFhjVVl4UzB0WWJqUi1mZyZjcmVhdGVfdGltZT0xNjY1NjExMjAwJm5vbmNlPTAuNTUyNTU2MDQwNjExNTQ1NyZyb2xlPXB1Ymxpc2hlciZleHBpcmVfdGltZT0xNjY4MjA2Nzk5JmluaXRpYWxfbGF5b3V0X2NsYXNzX2xpc3Q9'
             });
         </script>
     </body>
