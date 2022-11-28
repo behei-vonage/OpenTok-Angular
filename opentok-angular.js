@@ -268,7 +268,7 @@ ng.module('opentok', [])
               // TODO ADD A BUTTON
               subscriber.subscribeToCaptions(true);
             },
-            captionsReceived: function (event) {
+            captionReceived: function (event) {
               captionEventHandler(event, subscriber)
             }
           });
