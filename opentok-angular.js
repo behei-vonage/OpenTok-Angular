@@ -147,6 +147,7 @@ ng.module('opentok', [])
             props.videoContentHint = 'detail';
             publisherVideo = document.createElement('video');
             navigator.mediaDevices.getDisplayMedia({ video: { width, height }, audio: false }).then((stream) => {
+              scope.canvasStreamTracks = stream.getTracks()
               stream.getTracks().forEach((track) => {
                 track.addEventListener('ended', () => {
                   if (scope.publisher) {
@@ -194,6 +195,11 @@ ng.module('opentok', [])
             accessAllowed: function () {
               ng.element(element).addClass('allowed');
               scope.$emit('otAccessAllowed');
+            },
+            destroyed : function (e) {
+              if (scope.canvasStreamTracks){
+                scope.canvasStreamTracks.forEach(track => track.stop())
+              }
             },
             loaded: function () {
               $rootScope.$broadcast('otLayout');
