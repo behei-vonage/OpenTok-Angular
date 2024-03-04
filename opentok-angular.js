@@ -255,6 +255,7 @@ ng.module('opentok', [])
             props = scope.props() || {};
           props.width = props.width ? props.width : ng.element(element).width();
           props.height = props.height ? props.height : ng.element(element).height();
+          props.preferredResolution = 'auto';
           var oldChildren = ng.element(element).children();
           var subscriber = OTSession.session.subscribe(stream, element[0], props, function (err) {
             if (err) {
